@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Celegans Strain Ortholog Browser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Celegans Strain Ortholog Browser</h1>
+  <nav>
+    <a href="#search">Search</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+</header>
+
+<section id="home">
+  <p>This site provides a simple way to browse known temperature sensitive strains
+  of <i>C. elegans</i> alongside their human orthologs.</p>
+</section>
+
+<section id="search">
+  <h2>Search</h2>
+  <input type="text" id="searchInput" placeholder="Search by gene or strain" />
+  <div id="results"></div>
+</section>
+
+<section id="downloads">
+  <h2>Downloads</h2>
+  <ul>
+    <li><a href="../data/ortholog_table.tsv" download>ortholog_table.tsv</a></li>
+    <li><a href="../data/temperature_sensitive_table.tsv" download>temperature_sensitive_table.tsv</a></li>
+    <li><a href="../data/all_strains.csv" download>all_strains.csv</a></li>
+  </ul>
+</section>
+
+<script src="search.js"></script>
+</body>
+</html>
