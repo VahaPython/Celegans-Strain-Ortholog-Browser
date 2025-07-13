@@ -32,7 +32,9 @@ function renderResults(orthologs, strains) {
       const tr = document.createElement('tr');
       const ceLink = createLink(`https://wormbase.org/search/gene/${o.ce_gene}`, o.ce_gene);
       const humanLink = createLink(`https://wormbase.org/search/human_gene/${o.human_gene}`, o.human_gene);
-      tr.appendChild(Object.assign(document.createElement('td'), {appendChild: ceLink}));
+     const td1 = document.createElement('td');
+      td1.appendChild(ceLink);
+      tr.appendChild(td1);
       const td2 = document.createElement('td');
       td2.appendChild(humanLink);
       tr.appendChild(td2);
@@ -53,7 +55,9 @@ function renderResults(orthologs, strains) {
       const ceGeneLink = createLink(`https://wormbase.org/search/gene/${s.ce_gene}`, s.ce_gene);
       const humanText = s.human_gene || s.human_stable_id;
       const humanLink = createLink(`https://wormbase.org/search/human_gene/${humanText}`, humanText);
-      tr.appendChild(Object.assign(document.createElement('td'), {appendChild: strainLink}));
+      const tdStrain = document.createElement('td');
+        tdStrain.appendChild(strainLink);
+        tr.appendChild(tdStrain);
       const td2 = document.createElement('td');
       td2.appendChild(ceGeneLink);
       tr.appendChild(td2);
