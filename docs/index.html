@@ -2,30 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Celegans Strain Ortholog Browser</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C. elegans Strain Ortholog Browser</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Celegans Strain Ortholog Browser</h1>
-  <nav>
-    <a href="#search">Search</a>
-    <a href="#downloads">Downloads</a>
-  </nav>
+<header class="site-header">
+  <div class="container">
+    <h1>C. elegans Strain Ortholog Browser</h1>
+    <nav class="site-nav">
+      <a href="#search">Search</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+  </div>
 </header>
 
-<section id="home">
-  <p>This site provides a simple way to browse known temperature sensitive strains
-  of <i>C. elegans</i> alongside their human orthologs.</p>
+<section id="home" class="hero">
+  <div class="container">
+    <p>
+      This site provides a simple way to browse known temperature sensitive
+      strains of <i>C. elegans</i> alongside their human orthologs.
+    </p>
+  </div>
 </section>
 
-<section id="search">
+<section id="search" class="container">
   <h2>Search</h2>
   <input type="text" id="searchInput" placeholder="Search by gene or strain" />
   <div id="results"></div>
 </section>
 
-<section id="downloads">
+<section id="downloads" class="container">
   <h2>Downloads</h2>
   <ul>
     <li><a href="../data/ortholog_table.tsv" download>ortholog_table.tsv</a></li>
