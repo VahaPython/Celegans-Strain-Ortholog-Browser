@@ -4,7 +4,7 @@ This repository contains a small dataset of temperature sensitive *C. elegans* s
 
 ## Usage
 
-Open `docs/index.html` in a web browser or enable GitHub Pages for this repository.  Use the search box to filter by human gene symbol, worm gene, or strain name.  Links lead directly to the appropriate pages on [WormBase](https://wormbase.org/).
+Open `docs/index.html` in a web browser or enable GitHub Pages for this repository. The home page links to a dedicated search interface where you can filter by human gene symbol, worm gene, or strain name. Links lead directly to the appropriate pages on [WormBase](https://wormbase.org/).
 
 All source data are located in the `data/` directory and may also be downloaded from the **Downloads** section of the website.
 

@@ -59,6 +59,14 @@ body {
   border: 1px solid #ccc;
 }
 
+.hero select {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
 .results-section {
   margin-top: 2rem;
 }

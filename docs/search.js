@@ -81,22 +81,46 @@ function renderResults(orthologs, strains) {
 
 function search(query) {
   const q = query.trim().toLowerCase();
+  const type = document.getElementById('searchType').value;
   if (!q) {
     document.getElementById('results').innerHTML = '';
     return;
   }
-  const orth = data.orthologs.filter(o =>
-    o.ce_gene.toLowerCase().includes(q) ||
-    o.human_gene.toLowerCase().includes(q));
-  const str = data.strains.filter(s =>
-    s.strain_name.toLowerCase().includes(q) ||
-    s.ce_gene.toLowerCase().includes(q) ||
-    (s.human_gene && s.human_gene.toLowerCase().includes(q)));
+  const orth = data.orthologs.filter(o => {
+    switch (type) {
+      case 'human':
+        return o.human_gene.toLowerCase().includes(q);
+      case 'worm':
+        return o.ce_gene.toLowerCase().includes(q);
+      default:
+        return o.ce_gene.toLowerCase().includes(q) ||
+               o.human_gene.toLowerCase().includes(q);
+    }
+  });
+
+  const str = data.strains.filter(s => {
+    switch (type) {
+      case 'human':
+        return s.human_gene && s.human_gene.toLowerCase().includes(q);
+      case 'worm':
+        return s.ce_gene.toLowerCase().includes(q);
+      case 'strain':
+        return s.strain_name.toLowerCase().includes(q);
+      default:
+        return s.strain_name.toLowerCase().includes(q) ||
+               s.ce_gene.toLowerCase().includes(q) ||
+               (s.human_gene && s.human_gene.toLowerCase().includes(q));
+    }
+  });
+
   renderResults(orth, str);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   loadData();
   const input = document.getElementById('searchInput');
-  input.addEventListener('input', () => search(input.value));
+  const typeSelect = document.getElementById('searchType');
+  const doSearch = () => search(input.value);
+  input.addEventListener('input', doSearch);
+  typeSelect.addEventListener('change', doSearch);
 });
