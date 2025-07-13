@@ -31,7 +31,10 @@ function renderResults(orthologs, strains) {
     orthologs.forEach(o => {
       const tr = document.createElement('tr');
       const ceLink = createLink(`https://wormbase.org/search/gene/${o.ce_gene}`, o.ce_gene);
-      const humanLink = createLink(`https://wormbase.org/search/human_gene/${o.human_gene}`, o.human_gene);
+      // WormBase handles both worm and human genes under the same search
+      // endpoint.  Using `search/gene` avoids "No such gene" errors when
+      // linking to human gene symbols.
+      const humanLink = createLink(`https://wormbase.org/search/gene/${o.human_gene}`, o.human_gene);
      const td1 = document.createElement('td');
       td1.appendChild(ceLink);
       tr.appendChild(td1);
@@ -54,7 +57,8 @@ function renderResults(orthologs, strains) {
       const strainLink = createLink(`https://wormbase.org/search/strain/${s.strain_name}`, s.strain_name);
       const ceGeneLink = createLink(`https://wormbase.org/search/gene/${s.ce_gene}`, s.ce_gene);
       const humanText = s.human_gene || s.human_stable_id;
-      const humanLink = createLink(`https://wormbase.org/search/human_gene/${humanText}`, humanText);
+      // Use the generic gene search endpoint for human genes as well
+      const humanLink = createLink(`https://wormbase.org/search/gene/${humanText}`, humanText);
       const tdStrain = document.createElement('td');
         tdStrain.appendChild(strainLink);
         tr.appendChild(tdStrain);
