@@ -2,8 +2,9 @@ let data = {orthologs: [], strains: []};
 
 async function loadData() {
   try {
-    const res = await fetch('data.json');
+    const res = await fetch('data.json'); // If this fails, try './data.json' or '../docs/data.json'
     data = await res.json();
+    console.log('Loaded data:', data); // Debug: log loaded data
   } catch (e) {
     console.error('Failed to load data', e);
   }
