@@ -1,24 +1,32 @@
+:root {
+  --primary-color: #00637c;
+  --light-bg: #eef7f8;
+}
+
 body {
-  font-family: Arial, sans-serif;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+   line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
 }
 
 .container {
   max-width: 960px;
-  margin: 0 auto;   
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
 .site-header {
-  background: #333;
+  background: var(--primary-color);
   color: #fff;
 }
 
 .site-header h1 {
   margin: 0;
-  padding: 1rem 0;
-  font-size: 1.8rem;
+  padding: 1rem 0 0.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -32,31 +40,27 @@ body {
 .site-nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-.site-nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  padding-bottom: 1rem;
+.hero {
+  background: var(--light-bg);
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.site-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+.hero input[type="text"] {
+  margin-top: 1rem;
+  max-width: 400px;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
-section {
+.results-section {
   margin-top: 2rem;
-}
-
-@media (max-width: 600px) {
-  .site-nav {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 table {
@@ -71,4 +75,15 @@ th, td {
 
 th {
   background: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background: #fafafa;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
