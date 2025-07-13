@@ -209,6 +209,21 @@
       "ce_gene": "WBGene00000156",
       "human_stable_id": "ENSG00000115266",
       "human_gene": "APC2"
+    },
+    {
+      "ce_gene": "ADAMTS20",
+      "human_stable_id": "ENSG00000173157",
+      "human_gene": "ADAMTS20"
+    },
+    {
+      "ce_gene": "ADAMTS9",
+      "human_stable_id": "ENSG00000163638",
+      "human_gene": "ADAMTS9"
+    },
+    {
+      "ce_gene": "CACNA1C",
+      "human_stable_id": "ENSG00000151067",
+      "human_gene": "CACNA1C"
     }
   ],
   "strains": [
@@ -218,7 +233,7 @@
       "ce_gene": "ADAMTS20",
       "phenotype": "ADAM metallopeptidase with thrombospondin type 1 motif 20",
       "human_stable_id": "ENSG00000173157",
-      "human_gene": ""
+      "human_gene": "ADAMTS20"
     },
     {
       "strain_name": "ADAMTS9",
@@ -226,23 +241,7 @@
       "ce_gene": "ADAMTS9",
       "phenotype": "ADAM metallopeptidase with thrombospondin type 1 motif 9",
       "human_stable_id": "ENSG00000163638",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "AHI1",
-      "ts_mutation": "JBTS3",
-      "ce_gene": "AHI1",
-      "phenotype": "Abelson helper integration site 1",
-      "human_stable_id": "ENSG00000135541",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "ARL13B",
-      "ts_mutation": "JBTS8",
-      "ce_gene": "ARL13B",
-      "phenotype": "ADP ribosylation factor like GTPase 13B",
-      "human_stable_id": "ENSG00000169379",
-      "human_gene": ""
+      "human_gene": "ADAMTS9"
     },
     {
       "strain_name": "CACNA1C",
@@ -250,63 +249,7 @@
       "ce_gene": "CACNA1C",
       "phenotype": "calcium voltage-gated channel subunit alpha1 C",
       "human_stable_id": "ENSG00000151067",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "CC2D2A",
-      "ts_mutation": "JBTS9",
-      "ce_gene": "CC2D2A",
-      "phenotype": "coiled-coil and C2 domain containing 2A",
-      "human_stable_id": "ENSG00000048342",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "CEP104",
-      "ts_mutation": "JBTS25",
-      "ce_gene": "CEP104",
-      "phenotype": "centrosomal protein 104",
-      "human_stable_id": "ENSG00000116198",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "CEP290",
-      "ts_mutation": "JBTS5",
-      "ce_gene": "CEP290",
-      "phenotype": "centrosomal protein 290",
-      "human_stable_id": "ENSG00000198707",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "CEP41",
-      "ts_mutation": "JBTS15",
-      "ce_gene": "CEP41",
-      "phenotype": "centrosomal protein 41",
-      "human_stable_id": "ENSG00000106477",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "CPLANE1",
-      "ts_mutation": "JBTS17",
-      "ce_gene": "CPLANE1",
-      "phenotype": "ciliogenesis and planar polarity effector complex subunit 1",
-      "human_stable_id": "ENSG00000197603",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "CSPP1",
-      "ts_mutation": "JBTS21",
-      "ce_gene": "CSPP1",
-      "phenotype": "centrosome and spindle pole associated protein 1",
-      "human_stable_id": "ENSG00000104218",
-      "human_gene": ""
-    },
-    {
-      "strain_name": "DAW1",
-      "ts_mutation": "WDR69",
-      "ce_gene": "DAW1",
-      "phenotype": "dynein assembly factor with WD repeats 1",
-      "human_stable_id": "ENSG00000123977",
-      "human_gene": ""
+      "human_gene": "CACNA1C"
     }
   ]
 }
