@@ -45,16 +45,16 @@ function renderResults(orthologs, strains) {
     h.textContent = 'Temperature Sensitive Strains';
     resultsDiv.appendChild(h);
     const table = document.createElement('table');
-    table.innerHTML = `<tr><th>Strain</th><th>Gene</th><th>Human Gene</th><th>Phenotype</th></tr>`;
+    table.innerHTML = `<tr><th>Strain</th><th>C. elegans Gene</th><th>Human Gene</th><th>Phenotype</th></tr>`;
     strains.forEach(s => {
       const tr = document.createElement('tr');
       const strainLink = createLink(`https://wormbase.org/search/strain/${s.strain_name}`, s.strain_name);
-      const geneLink = createLink(`https://wormbase.org/search/gene/${s.ce_gene}`, s.ce_gene);
+      const ceGeneLink = createLink(`https://wormbase.org/search/gene/${s.ce_gene}`, s.ce_gene);
       const humanText = s.human_gene || s.human_stable_id;
       const humanLink = createLink(`https://wormbase.org/search/human_gene/${humanText}`, humanText);
       tr.appendChild(Object.assign(document.createElement('td'), {appendChild: strainLink}));
       const td2 = document.createElement('td');
-      td2.appendChild(geneLink);
+      td2.appendChild(ceGeneLink);
       tr.appendChild(td2);
       const td3 = document.createElement('td');
       td3.appendChild(humanLink);
